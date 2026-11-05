@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#160f14">
+  <meta name="description" content="حكاية صغيرة لروان في عيد ميلادها الثالث والعشرين.">
+  <title>إلى روان — 23 سنة من الحكايات</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="film-grain" aria-hidden="true"></div>
+  <div class="progress-track"><div class="progress-bar" id="progressBar"></div></div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="إلى البداية"><span class="brand-mark">R</span><span>إلى روان <small>حكاية من القلب</small></span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#story">حكايتنا</a>
+      <a href="#gallery">ذكرياتنا</a>
+      <a href="#letter">رسالة ليكي</a>
+    </nav>
+    <button class="music-button" id="musicButton" type="button" aria-pressed="false">
+      <span class="music-icon" aria-hidden="true">♫</span><span id="musicLabel">شغّل الموسيقى</span>
+    </button>
+    <audio id="backgroundMusic" loop preload="none">
+      <source src="assets/audio/music.mp3" type="audio/mpeg">
+    </audio>
+    <button class="menu-button" id="menuButton" type="button" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+  </header>
+
+  <main>
+    <section class="hero section-shell" id="home">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="tiny-star">✦</span> في يوم مميز لشخص مميز</p>
+        <h1>كل سنة وإنتِ<br><em>حكايتي الحلوة</em></h1>
+        <p class="hero-name">روان <span>♡</span></p>
+        <p class="hero-description">23 سنة من الحياة، ولسه قدامك حكايات جميلة كتير. والنهارده حبيت أعملك حاجة صغيرة تفضل معاكي.</p>
+        <a class="primary-button" href="#story">ابدئي الحكاية <span>↓</span></a>
+      </div>
+      <div class="hero-art reveal">
+        <div class="hero-image-frame">
+          <!-- بدّل الصورة التالية بصورتكم: assets/images/cover.jpg -->
+          <img src="assets/images/cover.jpg" alt="صورتكم المفضلة" onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder')">
+          <div class="image-placeholder-content"><span>♡</span><b>صورتكم هنا</b><small>ضع صورتك المفضلة باسم cover.jpg</small></div>
+        </div>
+        <div class="floating-note note-top">لأجمل صدفة في حياتي</div>
+        <div class="floating-note note-bottom"><span>23</span> فصل جديد من حكايتك</div>
+        <span class="decor decor-one">✧</span><span class="decor decor-two">♡</span>
+      </div>
+      <a class="scroll-cue" href="#story"><span></span> انزلي براحتك</a>
+    </section>
+
+    <section class="intro section-shell reveal">
+      <p class="eyebrow">قبل ما نبدأ</p>
+      <h2>مش هحاول أحكي كل حاجة…<br><em>بس هفكّرك إن ليكي مكانة خاصة.</em></h2>
+      <p>في حكايات مش محتاجة كلام كتير؛ محتاجة بس حد يفتكر تفاصيلها. هنا هتلاقي محطات من حكايتنا، وصور نحبها، ورسالة كتبتها مخصوص ليكي.</p>
+      <div class="signature">منّي ليكي، بكل الحب <span>♡</span></div>
+    </section>
+
+    <section class="story-section section-shell" id="story">
+      <div class="section-heading reveal">
+        <p class="eyebrow">الفصل الأول، والثاني، واللي جاي</p>
+        <h2>حكايتنا <em>سوا</em></h2>
+        <p>عدّل العناوين والتواريخ والكلام من ملف <code>script.js</code> عشان تبقى الحكاية حكايتكم فعلًا.</p>
+      </div>
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+    <section class="gallery-section section-shell" id="gallery">
+      <div class="section-heading reveal">
+        <p class="eyebrow">لحظات تستاهل تتفتكر</p>
+        <h2>ألبوم <em>ذكرياتنا</em></h2>
+        <p>اضغط على أي صورة عشان تشوفها أكبر. الصور الحالية مجرد أماكن مخصصة لصورك.</p>
+      </div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </section>
+
+    <section class="quote-section">
+      <div class="quote-inner reveal">
+        <span class="quote-mark">“</span>
+        <p>مش لازم كل لحظة تبقى مثالية…<br>كفاية إن الذكريات الحلوة بتبقى أحلى لما بنشاركها مع حد غالي.</p>
+        <span class="quote-heart">♡</span>
+      </div>
+      <div class="quote-orb orb-a"></div><div class="quote-orb orb-b"></div>
+    </section>
+
+    <section class="letter-section section-shell" id="letter">
+      <div class="letter-visual reveal">
+        <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="افتح الرسالة">
+          <div class="envelope-back"></div>
+          <div class="letter-paper"><span>إلى روان</span><b>♡</b><small>افتحي رسالتك</small></div>
+          <div class="envelope-flap"></div>
+          <div class="envelope-front"></div>
+          <span class="envelope-seal">R</span>
+        </div>
+        <p class="tap-hint">اضغطي على الظرف لفتح الرسالة</p>
+      </div>
+      <div class="letter-copy reveal">
+        <p class="eyebrow">كلام من قلبي</p>
+        <h2>في كلام<br><em>متخبي ليكي.</em></h2>
+        <p>كتبتلك رسالة مخصوص لليوم ده. خدي نفس، واضغطي على الظرف لما تكوني جاهزة.</p>
+        <button class="primary-button" id="openLetterButton" type="button">افتحي رسالتك <span>♡</span></button>
+      </div>
+    </section>
+
+    <section class="birthday-finale section-shell reveal" id="finale">
+      <div class="finale-stars" aria-hidden="true">✦　·　✧　·　✦</div>
+      <p class="eyebrow">وآخر حاجة قبل ما تمشي</p>
+      <h2>عيد ميلاد سعيد يا <em>روان</em></h2>
+      <p class="finale-text">يا رب سنتك الجديدة تكون مليانة طمأنينة وفرح وحاجات شبه قلبك الحلو. وكل سنة وإنتِ بخير، وكل سنة وإنتِ بتكبري وتحققي اللي نفسك فيه.</p>
+      <button class="surprise-button" id="surpriseButton" type="button"><span>✧</span> دوسي هنا للمفاجأة <span>✧</span></button>
+      <p class="finale-small">النهاية؟ لأ… دي بداية فصل جديد.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="#home"><span class="brand-mark">R</span><span>إلى روان <small>بكل الحب ♡</small></span></a>
+    <p>صُنعت بحب، مخصوص ليكي.</p>
+    <a href="#home" class="back-top">فوق تاني ↑</a>
+  </footer>
+
+  <div class="modal" id="letterModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-card letter-modal-card">
+      <button class="modal-close" type="button" aria-label="إغلاق الرسالة" data-close="true">×</button>
+      <span class="modal-flower">✿</span>
+      <p class="eyebrow">رسالة عيد ميلادك</p>
+      <h2 id="modalTitle">لروان، في عيد ميلادها الـ23</h2>
+      <div class="personal-letter" id="personalLetter"></div>
+      <p class="letter-signoff">من الشخص اللي بيتمنالك كل الخير <span>♡</span></p>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="heart-layer" id="heartLayer" aria-hidden="true"></div>
+</body>
+</html>
